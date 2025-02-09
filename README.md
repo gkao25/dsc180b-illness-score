@@ -20,13 +20,30 @@ Mentors: Mentors: Kasra Mohammadi, Phi Nguyen
 ---
 ## 📊 Datasets used
 ##### **1️⃣ GIS Weather Station Data (`gis_weatherstation_shape_2024_10_04.csv`)**
-- **Description:** Contains geographic information about weather stations, including their location, elevation, and identifiers.
-- **Columns:**
-  - `weatherstationcode` → Unique identifier for each station.
+- **Description:** Contains geographic information about weather stations, including their location, elevation, and administrative details.
+- **Rows:** 223  
+- **Columns:** 27  
+- **Columns Description:**
+  - `objectid` → Unique identifier for each record.
+  - `weatherstationcode` → Unique code assigned to each weather station.
   - `weatherstationname` → Name of the weather station.
-  - `latitude`, `longitude`, `elevation` → Geographic coordinates and elevation of the station.
-  - `district`, `nwszone` → Administrative and weather zone classifications.
-  - `shape` → GIS shape data in **WKT (Well-Known Text)** format.
+  - `scadartuid` → SCADA (Supervisory Control and Data Acquisition) ID.
+  - `structureid` → ID of the physical structure where the station is installed.
+  - `nwszone` → NOAA Weather Service zone classification.
+  - `district` → The district where the weather station is located.
+  - `thomasbrospagegrid` → Grid reference in Thomas Bros. maps.
+  - `constructionstatus` → Indicates the operational status (e.g., Active `A`).
+  - `creationuser`, `lastuser` → Users who created and last modified the record.
+  - `datecreated`, `datemodified` → Timestamps of creation and modification.
+  - `structureguid` → GUID for the physical structure.
+  - `symbolrotation` → Rotation angle of the station marker.
+  - `latitude`, `longitude`, `elevation` → Geographic coordinates and elevation in meters.
+  - `twinguid` → Associated twin GUID (if applicable).
+  - `hftd`, `hftdidc`, `zone1idc` → High fire threat district classifications.
+  - `gdb_geomattr_data` → Additional GIS-related attributes.
+  - `globalid` → Unique global identifier for the record.
+  - `shape` → **GIS Shape Data** stored in **WKT (Well-Known Text)** format.
+  - `shape_srid` → Spatial Reference System Identifier (**SRID 4431**).
   - `snapshot_date` → Date when the data was recorded.
 
 ---
