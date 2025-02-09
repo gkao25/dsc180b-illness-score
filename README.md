@@ -19,7 +19,7 @@ Mentors: Mentors: Kasra Mohammadi, Phi Nguyen
 
 ---
 ## 📊 Datasets used
-### **1️⃣ GIS Weather Station Data (`gis_weatherstation_shape_2024_10_04.csv`)**
+##### **1️⃣ GIS Weather Station Data (`gis_weatherstation_shape_2024_10_04.csv`)**
 - **Description:** Contains geographic information about weather stations, including their location, elevation, and identifiers.
 - **Columns:**
   - `weatherstationcode` → Unique identifier for each station.
@@ -31,7 +31,7 @@ Mentors: Mentors: Kasra Mohammadi, Phi Nguyen
 
 ---
 
-### **2️⃣ Vegetation Risk Index (VRI) Data (`src_vri_snapshot_2024_03_20.csv`)**
+##### **2️⃣ Vegetation Risk Index (VRI) Data (`src_vri_snapshot_2024_03_20.csv`)**
 - **Description:** Contains VRI risk levels for different locations based on historical wind gusts.
 - **Columns:**
   - `anemometercode` → Weather station associated with the VRI data.
@@ -43,7 +43,7 @@ Mentors: Mentors: Kasra Mohammadi, Phi Nguyen
 
 ---
 
-### **3️⃣ Meteorology Station Summary (`src_wings_meteorology_station_summary_snapshot_2023_08_02.csv`)**
+##### **3️⃣ Meteorology Station Summary (`src_wings_meteorology_station_summary_snapshot_2023_08_02.csv`)**
 - **Description:** Provides wind speed alerts and risk levels for different weather stations.
 - **Columns:**
   - `station` → Weather station identifier.
@@ -54,7 +54,7 @@ Mentors: Mentors: Kasra Mohammadi, Phi Nguyen
 
 ---
 
-### **4️⃣ Wind Speed Data (`src_wings_meteorology_windspeed_snapshot_2023_08_02.csv`)**
+##### **4️⃣ Wind Speed Data (`src_wings_meteorology_windspeed_snapshot_2023_08_02.csv`)**
 - **Description:** Historical wind speed data collected from weather stations.
 - **Columns:**
   - `date` → Date of wind speed measurement.
