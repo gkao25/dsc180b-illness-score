@@ -10,7 +10,7 @@ from folium.plugins import HeatMap
 
 import seaborn as sns
 import matplotlib
-matplotlib.use('TkAgg')  # Switch to TkAgg backend
+matplotlib.use('TkAgg') 
 import matplotlib.pyplot as plt
 
 from sklearn.model_selection import train_test_split
