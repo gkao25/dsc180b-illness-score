@@ -9,10 +9,12 @@ Wildfire Mitigation with SDG&E
 
 
 ## 📂 Project Structure
-- `midterm_energy.py` → Main script for (energy conductor) data processing, visualization, and ML model training.
-- `mid_term_vegetation.py` → Main script for (vegetation, geographical, living) data processing, visualization, and ML model training.
-- `requirements.txt` → List of required Python dependencies.
 - `README.md` → Instructions on setup and usage.
+- `requirements.txt` → List of required Python dependencies.
+- `ens_preprocessing.py` → Main script for downloading and preprocessing the data from SDGE/SDSC. 
+- `weather_training.py` → Main script for *weather variables* (wind speed, air humidity, etc.) ML model training. 
+- `midterm_energy.py` → Main script for *energy conductor* (type, structure, etc.) data processing, visualization, and ML model training.
+- `mid_term_vegetation.py` → Main script for *vegetation, geographical, and living* data processing, visualization, and ML model training.
 - Jupyter Notebooks → For testing/development. Due to data security, no cummulative outputs are shown. 
 
 **Note:** The datasets are not publicly available, so they cannot be uploaded here. However, you can find their metadata below.
