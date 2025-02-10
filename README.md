@@ -9,7 +9,6 @@ Wildfire Mitigation with SDG&E
 
 
 ## 📂 Project Structure
-- `...`
 - `midterm_energy.py` → Main script for (energy conductor) data processing, visualization, and ML model training.
 - `mid_term_vegetation.py` → Main script for (vegetation, geographical, living) data processing, visualization, and ML model training.
 - `requirements.txt` → List of required Python dependencies.
