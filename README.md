@@ -14,6 +14,7 @@ Wildfire Mitigation with SDG&E
 - `mid_term_vegetation.py` → Main script for (vegetation, geographical, living) data processing, visualization, and ML model training.
 - `requirements.txt` → List of required Python dependencies.
 - `README.md` → Instructions on setup and usage.
+- Jupyter Notebooks → For testing/development. 
 
 **Note:** The datasets are not publicly available, so they cannot be uploaded here. However, you can find their metadata below.
 
