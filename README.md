@@ -1,11 +1,11 @@
 # ILLNESS, An Alternative Way To Assess Wildfire Risk
 
-UCSD Data Science Capstone Project
-DSC 180AB, Section B14-2
+UCSD Data Science Capstone Project\
+DSC 180AB, Section B14-2\
 Wildfire Mitigation with SDG&E
 
-Group Members: Gloria Kao, Shentong Li, Neil Sharma
-Mentors: Mentors: Kasra Mohammadi, Phi Nguyen
+**Group Members:** Gloria Kao, Shentong Li, Neil Sharma\
+**Mentors:** Mentors: Kasra Mohammadi, Phi Nguyen
 
 
 ## 📂 Project Structure
@@ -27,18 +27,23 @@ To ensure a **consistent environment**, we recommend using **Conda** to manage d
 If you haven't installed Conda, download and install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/distribution).
 
 ##### **2️⃣ Create a Conda Virtual Environment**
-Open a terminal and run: ```bash
-
+Open a terminal and run: 
+```
+bash
 conda create --name wildfire_analysis python=3.9 -y
-
 conda activate wildfire_analysis
+```
 
 ##### **3️⃣ Install Required Packages**
-pip install numpy pandas networkx geopandas shapely folium seaborn matplotlib scikit-learn 
+```
+pip install numpy pandas networkx geopandas shapely folium seaborn matplotlib scikit-learn
+```
 
 or
 
+```
 pip install -r requirements.txt
+```
 
 ##### **4️⃣ Run the Script**
 python mid_term_vegetation.py
