@@ -48,8 +48,9 @@ pip install -r requirements.txt
 ```
 
 ##### **4️⃣ Run the Script**
+```
 python mid_term_vegetation.py
-
+```
 
 ## 📊 Datasets used
 ##### **1️⃣ GIS Weather Station Data (`gis_weatherstation_shape_2024_10_04.csv`)**
