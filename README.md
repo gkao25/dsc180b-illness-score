@@ -7,6 +7,10 @@ Wildfire Mitigation with SDG&E
 **Group Members:** Gloria Kao, Shentong Li, Neil Sharma\
 **Mentors:** Mentors: Kasra Mohammadi, Phi Nguyen
 
+## 🔗 Project Website: 
+
+https://gkao25.github.io/dsc180b-illness-score/
+
 
 ## 📂 Project Structure
 - `README.md` → Instructions on setup and usage.

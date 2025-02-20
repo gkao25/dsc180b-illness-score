@@ -1,0 +1,111 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+    background-color: #f1d6d6;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #1d3557;
+  }
+  
+h3 {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 0;
+    color: #495057;
+}
+h4 {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 0;
+    color: #495057;
+}
+#selectButton {
+    margin-bottom: 20px;
+}
+
+.explanation {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* vizualizations */
+#viz1 {
+    margin-top: 20px;
+    align-content: center;
+}
+.state {
+    stroke: #fff;
+    stroke-width: 1.5px;
+}
+.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 250px;
+    height: 170px;
+    padding: 2px;
+    font: 10px;
+    background: lightsteelblue;
+    pointer-events: none;
+}
+
+/* line chart legend */
+.input-color {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: center;
+    align-self: center;
+    /* margin-left: 500px; */
+}
+.input-color .color-box {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: #ccc;
+    position: absolute;
+    left: 480px;
+    top: 8px;
+    margin-left: auto;
+}
+
+/* map 2 legend */
+.legend {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    align-items: center;
+}
+.legend-color {
+    width: 400px;
+    height: 20px;
+    background: linear-gradient(to right, #85aefe, #ff4d13);
+    margin-left: 4px;
+    margin-right: 4px;
+}
+.legend-labels {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin-top: 5px;
+    font-size: 15px;
+}
