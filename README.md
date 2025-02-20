@@ -21,14 +21,14 @@ Wildfire Mitigation with SDG&E
 
 ---
 
-## 🔧 Installation & Environment Setup for Vegetation file (mid_term_vegetation.py)
+## 🔧 Installation & Environment Setup for Vegetation file (mid_term_vegetation.py) and Energy file (midterm_energy.py)
 
 To ensure a **consistent environment**, we recommend using **Conda** to manage dependencies.
 
-##### **1️⃣ Install Conda**
+#### **1️⃣ Install Conda**
 If you haven't installed Conda, download and install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/distribution).
 
-##### **2️⃣ Create a Conda Virtual Environment**
+#### **2️⃣ Create a Conda Virtual Environment**
 Open a terminal and run: 
 ```
 bash
@@ -36,7 +36,7 @@ conda create --name wildfire_analysis python=3.9 -y
 conda activate wildfire_analysis
 ```
 
-##### **3️⃣ Install Required Packages**
+#### **3️⃣ Install Required Packages**
 ```
 pip install numpy pandas networkx geopandas shapely folium seaborn matplotlib scikit-learn
 ```
@@ -47,12 +47,14 @@ or
 pip install -r requirements.txt
 ```
 
-##### **4️⃣ Run the Script**
-python mid_term_vegetation.py
+#### **4️⃣ Run the Script**
+```
+python <filename.py>
+```
 
 
 ## 📊 Datasets used
-##### **1️⃣ GIS Weather Station Data (`gis_weatherstation_shape_2024_10_04.csv`)**
+#### **1️⃣ GIS Weather Station Data (`gis_weatherstation_shape_2024_10_04.csv`)**
 - **Description:** Contains geographic information about weather stations, including their location, elevation, and administrative details.
 - **Rows:** 223  
 - **Columns:** 27  
@@ -81,7 +83,7 @@ python mid_term_vegetation.py
 
 ---
 
-##### **2️⃣ Vegetation Risk Index (VRI) Data (`src_vri_snapshot_2024_03_20.csv`)**
+#### **2️⃣ Vegetation Risk Index (VRI) Data (`src_vri_snapshot_2024_03_20.csv`)**
 - **Description:** Contains VRI risk levels for different locations based on historical wind gusts.
 - **Columns:**
   - `anemometercode` → Weather station associated with the VRI data.
@@ -93,7 +95,7 @@ python mid_term_vegetation.py
 
 ---
 
-##### **3️⃣ Meteorology Station Summary (`src_wings_meteorology_station_summary_snapshot_2023_08_02.csv`)**
+#### **3️⃣ Meteorology Station Summary (`src_wings_meteorology_station_summary_snapshot_2023_08_02.csv`)**
 - **Description:** Provides wind speed alerts and risk levels for different weather stations.
 - **Columns:**
   - `station` → Weather station identifier.
@@ -104,8 +106,18 @@ python mid_term_vegetation.py
 
 ---
 
-##### **4️⃣ Wind Speed Data (`src_wings_meteorology_windspeed_snapshot_2023_08_02.csv`)**
+#### **4️⃣ Wind Speed Data (`src_wings_meteorology_windspeed_snapshot_2023_08_02.csv`)**
 - **Description:** Historical wind speed data collected from weather stations.
+- **Columns:**
+  - `date` → Date of wind speed measurement.
+  - `wind_speed` → Recorded wind speed.
+  - `station` → Identifier for the weather station.
+  - `snapshot_date` → Date when the data was recorded.
+
+---
+
+#### **4️⃣ ens_gfs Weather Data (from [this database](https://sdge.sdsc.edu/data/sdge/))**
+- **Description:** Historical weather data collected from weather stations.
 - **Columns:**
   - `date` → Date of wind speed measurement.
   - `wind_speed` → Recorded wind speed.
