@@ -5,7 +5,7 @@ body {
     padding-left: 100px;
     padding-right: 100px;
     padding-bottom: 100px;
-    background-color: #f1d6d6;
+    background-color: #f7ecec;
     line-height: 1.5;
 }
 
@@ -21,20 +21,20 @@ h1 {
 }
 
 h2 {
-    color: #1d3557;
+    color: #12274b;
   }
   
 h3 {
     text-align: center;
     font-size: 18px;
     margin-top: 0;
-    color: #495057;
+    color: #5F5555;
 }
 h4 {
     text-align: center;
     font-size: 18px;
     margin-top: 0;
-    color: #495057;
+    color: #5F5555;
 }
 #selectButton {
     margin-bottom: 20px;
