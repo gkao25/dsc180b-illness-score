@@ -36,9 +36,6 @@ h4 {
     margin-top: 0;
     color: #5F5555;
 }
-#selectButton {
-    margin-bottom: 20px;
-}
 
 .explanation {
     margin-left: 50px;
@@ -46,6 +43,64 @@ h4 {
     padding: 10px;
     text-align: center;
 }
+
+/* Center the table */
+table {
+    border-collapse: collapse;
+    width: 53%; /* Adjust as needed */
+    margin: 20px auto; /* Centers the table horizontally */
+}
+
+/* Style table cells */
+td, th {
+    border: none;
+    padding: 8px;
+    text-align: left; /* Aligns text to the left */
+}
+
+
+/* Style the navigation bar */
+.navbar {
+    background-color: #333; /* Dark background */
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 20px;
+    position: fixed; /* Sticks to the top */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/* Style navigation links */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0px; /* Adds space between links */
+    display: block;
+}
+
+/* Hover effect */
+.navbar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Add spacing below the navbar */
+body {
+    margin: 0;
+    padding-top: 50px; /* Prevents content from being hidden under the fixed navbar */
+    font-family: Arial, sans-serif;
+}
+
+div {
+    scroll-margin-top: 50px; /* Adjust based on navbar height */
+}
+
+
+/* COPIED FROM TEMPLATE THAT USES D3 */
 
 /* vizualizations */
 #viz1 {
