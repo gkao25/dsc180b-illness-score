@@ -5,101 +5,123 @@
     <title>ILLNESS, An Alternative Way To Assess Wildfire Risk</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- Navigation Bar -->
-<div class="navbar">
-    <a href="#">Back to Top</a>
-    <a href="#introduction">Introduction</a>
-    <a href="#methods">Methods</a>
-    <a href="#results">Results & Applications</a>
-</div>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#">Back to Top ↑</a>
+        <a href="#introduction">Introduction</a>
+        <a href="#methods">Methods</a>
+        <a href="#results">Results</a>
+        <a href="#discussion">Discussion</a>
+        <a href="#credits">Credits & More</a>
+    </div>
 
-<!-- Title -->
-<h1>ILLNESS, An Alternative Way To Assess Wildfire Risk</h1>
-<h4>
-    UCSD Data Science Capstone Project<br>
-    <b>Group Members:</b> Gloria Kao, Shentong Li, Neil Sharma
-</h4>
-<br>
 
-<div class="explanation" id="introduction">
-    <h2>Introduction</h2>
-    Wildfire has always been a problem in Southern California, and they are becoming
-    more common and threatening due to climate change and drought. One of the most common ignitor of wildfire is 
-    falling power lines, and utility companies like San Diego Gas & Electric (SDG&E) have been making efforts to 
-    analyze the reasons. Some...
-</div>
+    <!-- Title -->
+    <h1>ILLNESS, An Alternative Way To Assess Wildfire Risk</h1>
+    <h4>
+        UCSD Data Science Capstone Project<br>
+        <b>Group Members:</b> Gloria Kao, Shentong Li, Neil Sharma
+    </h4>
+    <br>
 
-<div class="explanation">
-    <h2>Objective</h2>
-    To create a multi-factor machine learning model designed to enhance the accuracy of PSPS decisions.<br>
-    We call it the <b>ILLNESS Model</b>, which stands for <b>I</b>nsight on...
-    <table>
-        <tr>
-            <td><b>L</b>ife</td>
-            <td>Of people, considering those who need medical devices and critical services</td>
-        </tr>
-        <tr>
-            <td><b>L</b>iving</td>
-            <td>Major social factors such as elections or concerts</td>
-        </tr>
-        <tr>
-            <td><b>N</b>ature</td>
-            <td>Vegetation around the area, particularly their dry fuel level</td>
-        </tr>
-        <tr>
-            <td><b>E</b>nergy</td>
-            <td>Power grid data, such as the location and type of a conductor</td>
-        </tr>
-        <tr>
-            <td><b>S</b>ervice</td>
-            <td>Last time SDG&E serviced that area for maintenance</td>
-        </tr>
-        <tr>
-            <td><b>S</b>eason</td>
-            <td>Environmental data such as wind gust and rainfall</td>
-        </tr>
-    </table>
-</div>
+    <div class="explanation" id="introduction">
+        <h2>Introduction</h2>
+        Wildfires are a major environmental and safety issue in Southern California, and they are becoming
+        more common and threatening due to climate change and drought. One of the most common reasons of ignited wildfire is 
+        faulty power lines, and utility companies like San Diego Gas & Electric (SDG&E) have been making efforts to 
+        analyze the reasons. Through data anaylsis, utility companies can predict the risk of a wildfire happneing 
+        and prevent it by turning off the power grid, and the event is called a power safety public shutoff (PSPS). 
+        SDG&E's current data analysis include weather reports (wind speed), vegetation in the geographical area, and 
+        the conduct span impact on serviced customers. Our project aims to further analyze possible reasons for a wildfire, 
+        and create a more data-informed system that decides when a emergency shutoff is indeed needed, and when a PSPS 
+        might impact people more negatively than positively.  
+    </div>
 
-<div class="explanation" id="methods">
-    <h2>Methods</h2>
-    We coded a few different types of machine learning models in Python, with the help of data science packages like 
-    Pandas, NumPy, and Scipy. 
-</div>
+    <div class="explanation">
+        <h2>Objective</h2>
+        To create a multi-factor machine learning model designed to enhance the accuracy of PSPS decisions.<br>
+        We call it the <b>ILLNESS Model</b>, which stands for <b>I</b>nsights on...
+        <table>
+            <tr>
+                <td><b>L</b>ife</td>
+                <td>Of people, paying attention to those who need medical devices and critical services</td>
+            </tr>
+            <tr>
+                <td><b>L</b>iving</td>
+                <td>Situational, major social factors such as elections or concerts</td>
+            </tr>
+            <tr>
+                <td><b>N</b>ature</td>
+                <td>Vegetation around the area, particularly the dry plants and their fuel level</td>
+            </tr>
+            <tr>
+                <td><b>E</b>nergy</td>
+                <td>Power grid data, such as the location and type of a conductor</td>
+            </tr>
+            <tr>
+                <td><b>S</b>ervice</td>
+                <td>Last time SDG&E serviced an area for maintenance</td>
+            </tr>
+            <tr>
+                <td><b>S</b>eason</td>
+                <td>Environmental data such as wind gust and rainfall</td>
+            </tr>
+        </table>
+    </div>
 
-<div class="explanation" id="results">
-    <h2>Results & Applications</h2>
-    As 
-</div>
+    <div class="explanation" id="methods">
+        <h2>Methods</h2>
+        We coded a few different types of machine learning models in Python, with the help of data science packages like 
+        Pandas, NumPy, and Scipy. <br>
+        We have 4 models in total, which is 2 less of our proposed factors in ILLNESS because 
+        some of the factors are similar enough to be combined into one model. Each model uses a different machine learning 
+        algorithm that is best suited to their data type. 
+    </div>
+    <img src="image.jpg" alt="flowchart" width="300" height="200">
 
-<!-- Map -->
-<br>
-<br>
-<h2>
-    Predicted wildfire risk using our ILLNESS model
-</h2>
-<div>
-    insert heatmap
-</div>
-<svg id="map2" width="960" height="600"></svg>
-<script src="viz.js"></script>
+    <div class="explanation" id="results">
+        <h2>Results</h2>
+        Our final, combined ILLNESS model has an accuracy of __%. <br>
+        The individual models' accuarcies are as following: 
+        [table?]
+    </div>
+    <img src="image.jpg" alt="accuracy-barchat" width="300" height="200">
 
-<div class="explanation" id="credits">
-    <h2>Credits</h2>
-    We would like to thank our mentors at SDG&E, 
-    <a href="https://www.linkedin.com/in/pdashk">Phi Nguyen</a>, 
-    <a href="https://www.linkedin.com/in/kasramohammadi">Kasra Mohammadi</a> and 
-    <a href="https://www.linkedin.com/in/jakewigal">Jacob Wigal</a>!
-</div>
+    <!-- Map -->
+    <br>
+    <h2>
+        Predicted wildfire risk using our ILLNESS model
+    </h2>
+    <img src="image.jpg" alt="heatmap" width="300" height="200">
 
-<div class="explanation">
-    <h2>GitHub Page</h2>
-    You can click 
-    <a href="https://github.com/gkao25/dsc180b-illness-score">here</a> 
-    to see our codes. 
-</div>
+    <div class="explanation" id="discussion">
+        <h2>Discussion</h2>
+        This project could be for internal use, implemented by SDG&E. It can also be for public, as the ILLNESS model 
+        provides a single numerical value that is easy to interpret. Similar to our geographical heatmap above, we could 
+        make a dashboard website that updates the score live and provide transparency to people who uses energy from SDG&E 
+        so they are aware of possible PSPS events, and perhaps even the reasons. 
+    </div>
+
+    <div class="explanation" id="credits">
+        <h2>Credits</h2>
+        We would like to thank our mentors at SDG&E: 
+        <a href="https://www.linkedin.com/in/pdashk">Phi Nguyen</a>, 
+        <a href="https://www.linkedin.com/in/kasramohammadi">Kasra Mohammadi</a> and 
+        <a href="https://www.linkedin.com/in/jakewigal">Jacob Wigal</a>!
+    </div>
+
+    <div class="explanation">
+        <h2>GitHub Page</h2>
+        Click <a href="https://github.com/gkao25/dsc180b-illness-score">here</a> 
+        to visit our GitHub repository. <br>
+        Click <a href="https://github.com/gkao25/dsc180b-illness-score">here</a> 
+        to view our poster. <br>
+        Click <a href="https://github.com/gkao25/dsc180b-illness-score">here</a> 
+        to view our report. 
+    </div>
 
 </body>
 </html>
