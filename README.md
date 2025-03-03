@@ -20,6 +20,7 @@ https://gkao25.github.io/dsc180b-illness-score/
 - `midterm_energy.py` → Main script for *energy conductor* (type, structure, etc.) data processing, visualization, and ML model training.
 - `mid_term_vegetation.py` → Main script for *vegetation, geographical, and living* data processing, visualization, and ML model training.
 - Jupyter Notebooks → For testing/development. Due to data security, no cummulative outputs are shown. 
+- `website_viz` → Images for GitHub page. 
 
 **Note:** The datasets are not publicly available, so they cannot be uploaded here. However, you can find their metadata below.
 
