@@ -130,22 +130,22 @@
                 <th>Output</th>
             </tr>
             <tr>
-                <td><strong>Weather Model</strong> - MLP</td>
+                <td><b>Weather Model</b> - MLP</td>
                 <td>Temperature, dryness, windspeed</td>
                 <td>A weather risk score, reflecting how weather conditions contribute to potential wildfire ignition or spread.</td>
             </tr>
             <tr>
-                <td><strong>Nature Model</strong> - Linear Regression</td>
+                <td><b>Nature Model</b> - Linear Regression</td>
                 <td>Latitude, longitude, VRI, strike trees, elevation.</td>
                 <td>A weighted Nature Index (scaled 1-10).</td>
             </tr>
             <tr>
-                <td><strong>Energy/Service Model</strong> - Random Forest</td>
+                <td><b>Energy/Service Model</b> - Random Forest</td>
                 <td>Upstream HFTD, Days since work order (upstream/downstream), miles.</td>
                 <td>R²: 0.537, showing moderate predictive power.</td>
             </tr>
             <tr>
-                <td><strong>Life Model</strong> - Custom Weighted Function</td>
+                <td><b>Life Model</b> - Custom Weighted Function</td>
                 <td>Population density, number of customers served, presence of critical facilities.</td>
                 <td>A custom score out of 100 that takes into account critical customers such as essential service and customers on life support for each region of SDG&E’s territory.</td>
             </tr>
