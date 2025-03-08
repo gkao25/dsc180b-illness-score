@@ -45,7 +45,7 @@
         <h2>Objective</h2>
         To create a multi-factor machine learning model designed to enhance the accuracy of PSPS decisions.<br>
         We call it the <b>ILLNESS Model</b>, which stands for <b>I</b>nsights on...
-        <table class="borderless-table">
+        <table class="short-table">
             <tr>
                 <td><b>L</b>ife</td>
                 <td>Of people, paying attention to those who need medical devices and critical services.</td>
@@ -76,7 +76,7 @@
     <div class="explanation" id="methods">
         <h2>Data</h2>
         Based on the factors we have listed above, we obtained several datasets to train our models. 
-        <table class="borderless-table">
+        <table class="short-table">
             <tr>
                 <td>Weather</td>
                 <td>Forecasted & observed data from SDG&E website.</td>
@@ -103,19 +103,18 @@
 
     <div class="explanation">
         <h2>Methodology</h2>
-        We coded a few different types of machine learning models in Python, with the help of data science packages such as  
-        Pandas, NumPy, and Scipy. <br><br>
-        We have 4 models in total, which is 2 less of our proposed factors in ILLNESS because 
+        <p>We coded a few different types of machine learning models in Python, with the help of data science packages such as  
+        Pandas, NumPy, and Scipy. </p>
+        <p>We have 4 models in total, which is 2 less of our proposed factors in ILLNESS because 
         some of the factors are similar enough to be combined into one model. Each model uses a different machine learning 
         algorithm that is best suited to their data type. For each model, a corresponding type of dataset is taken as input and
         learns the mathematical parameters according to the algorithm. The learned model predicts the wildfire risk 
-        using a test dataset and outputs the accuracy, which is the result that we collect. 
+        using a test dataset and outputs a score, which we collect for the final composite ILLNESS model. </p>
     </div>
     <figure>
         <img src="website_viz/flowchart2.png" alt="flowchart" width="70%" height="70%">
         <figcaption>
-            Fig.1 - Flowchart of our risk assessment model. Sub-models for weather patterns, vegetation risk, energy infrastructure, and life-critical services generate intermediate embeddings, which are combined into a final composite model for wildfire risk 
-            prediction.
+            Figure 1 - Flowchart of our risk assessment model. Sub-models for weather patterns, vegetation risk, energy infrastructure, and life-critical services generate intermediate embeddings, which are combined into a final composite model for wildfire risk prediction.
         </figcaption>
     </figure>
     
@@ -147,7 +146,7 @@
             <tr>
                 <td><b>Life Model</b> - Custom Weighted Function</td>
                 <td>Population density, number of customers served, presence of critical facilities.</td>
-                <td>A custom score out of 100 that takes into account critical customers such as essential service and customers on life support for each region of SDG&E’s territory.</td>
+                <td>A custom score out of 100 that takes into account critical customers such as essential service and customers on life support for each region of SDG&E's territory.</td>
             </tr>
         </table>
         The features here are the most critical for understanding what our model is looking at when considering wildfire and/or 

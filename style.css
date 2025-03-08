@@ -73,30 +73,24 @@ figcaption {
 
 
 /* Center the table */
-.borderless-table {
-    border-collapse: collapse;
+.short-table {
+    /* border-collapse: collapse; */
     width: 50%; /* Adjust as needed */
     margin: 10px auto; /* Centers the table horizontally */
 }
 
 /* Style table cells */
-.borderless-table td, .borderless-table th {
-    border: none;
-    padding: 6px;
+td, th {
+    border: 1px solid black;
+    padding: 5px;
     text-align: left; /* Aligns text to the left */
 }
 
 .bordered-table {
-    border: 5px;
     width: 80%;
     margin: 10px auto;
 }
 
-.bordered-table td, .bordered-table th {
-    border: 1px solid black;
-    text-align: left;
-    padding: 5px;
-}
 
 /* Back to Top Button */
 #backToTop {
