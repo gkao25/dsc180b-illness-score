@@ -155,27 +155,29 @@
 
     <div class="explanation">
         <h3>
-            Final Composite ILLNESS Model
-        </h3>
-        A mathematical model to assess wildfire risk and impact of power shutoffs, combining:
-    </div>
-
-    <!-- Map -->
-    <div class="explanation">
-        <h3>
-            Predicted wildfire risk using our ILLNESS model
+            Predicted Wildfire Risk Ssing the Intermediate Models
         </h3>
         Below is an interactive heatmap that shows our predicted wildfire risk. A redder area indicates a higher risk. 
         The areas are divided into districts of San Diego County, making it easier for users to find their location. 
-        When the mouse is hovered over an area, the tooltip shows the district name and ILLNESS score breakdown: energy, nature, 
+        When the mouse is hovered over an area, the tooltip shows the district name and wildfire risk breakdown: energy, nature, 
         weather, and overall. The red-green color scale shows according to the overall score. 
     </div>
     <iframe src="website_viz/alpha_map.html" width="1100px" height="500px"></iframe>
 
     <div class="explanation">
-        <h2>
-            Predicted areas for PSPS using our ILLNESS model
-        </h2>
+        <h3>
+            Final Composite ILLNESS Model
+        </h3>
+        <p>We created a mathematical model to assess wildfire risk and impact of power shutoffs. 
+        It includes all the aforementioned factors: weather, nature, and infrastructure wildfire risk within an area, and the impact on customers if power is shut off. Each varaible is weighted according to its importance, and produce a final score 
+        that indicates the PSPS risk. This number ranges from 1 to 100, which makes it easy to understand at a high level. Other mathematical constants are included to scale and adjust for interactions or overlaps between different wildfire risk factors.</p>
+        <i>Please check our report (linked at the bottom of the page) if you would like to see more details about the composite function. </i>
+    </div>
+
+    <div class="explanation">
+        <h3>
+            Predicted Areas for PSPS Using Our ILLNESS Model
+        </h3>
         Below is an interactive heatmap that shows PSPS risk, i.e. where a PSPS should occur or not. The difference between this 
         visualization and the previous one is that the population risk (life/living factor) is considered as well, so we can 
         assess the impact a PSPS will bring to a community. 
