@@ -12,10 +12,10 @@
     <div class="navbar">
         <a href="#">Back to Top ↑</a>
         <a href="#introduction">Introduction</a>
-        <a href="#methods">Methods</a>
+        <a href="#methods">Data & Methods</a>
         <a href="#results">Results</a>
         <a href="#discussion">Discussion</a>
-        <a href="#credits">Credits & More</a>
+        <a href="#credits">Acknowledgement & More</a>
     </div>
 
 
@@ -37,7 +37,7 @@
         and prevent it by turning off the power grid, and the event is called a power safety public shutoff (PSPS). 
         SDG&E's current data analysis include weather reports (wind speed), vegetation in the geographical area, and 
         the conduct span impact on serviced customers. Our project aims to further analyze possible reasons for a wildfire, 
-        and create a more data-informed system that decides when a emergency shutoff is indeed needed, and when a PSPS 
+        and create a more data-informed system that decides when a emergency shutoff is indeed needed or when it 
         might impact people more negatively than positively.  
     </div>
 
@@ -45,62 +45,128 @@
         <h2>Objective</h2>
         To create a multi-factor machine learning model designed to enhance the accuracy of PSPS decisions.<br>
         We call it the <b>ILLNESS Model</b>, which stands for <b>I</b>nsights on...
-        <table>
+        <table class="borderless-table">
             <tr>
                 <td><b>L</b>ife</td>
-                <td>Of people, paying attention to those who need medical devices and critical services</td>
+                <td>Of people, paying attention to those who need medical devices and critical services.</td>
             </tr>
             <tr>
                 <td><b>L</b>iving</td>
-                <td>Situational, major social factors such as elections or concerts</td>
+                <td>Situational, major social factors such as elections or concerts.</td>
             </tr>
             <tr>
                 <td><b>N</b>ature</td>
-                <td>Vegetation around the area, particularly the dry plants and their fuel level</td>
+                <td>Vegetation around the area, particularly the dry plants and their fuel level.</td>
             </tr>
             <tr>
                 <td><b>E</b>nergy</td>
-                <td>Power grid data, such as the location and type of a conductor</td>
+                <td>Power grid data, such as the location and type of a conductor.</td>
             </tr>
             <tr>
                 <td><b>S</b>ervice</td>
-                <td>Last time SDG&E serviced an area for maintenance</td>
+                <td>Last time SDG&E serviced an area for maintenance.</td>
             </tr>
             <tr>
                 <td><b>S</b>eason</td>
-                <td>Environmental data such as wind gust and rainfall</td>
+                <td>Environmental data such as wind gust and rainfall.</td>
             </tr>
         </table>
     </div>
 
     <div class="explanation" id="methods">
-        <h2>Methods</h2>
-        We coded a few different types of machine learning models in Python, with the help of data science packages like 
-        Pandas, NumPy, and Scipy. <br>
+        <h2>Data</h2>
+        Based on the factors we have listed above, we obtained several datasets to train our models. 
+        <table class="borderless-table">
+            <tr>
+                <td>Weather</td>
+                <td>Forecasted & observed data from SDG&E website.</td>
+            </tr>
+            <tr>
+                <td>Vegetation</td>
+                <td>Tree density, VRI (Vegetation Resource Inventory).</td>
+            </tr>
+            <tr>
+                <td>Geographic</td>
+                <td>Elevation, HFTD (High Fire Threat District).</td>
+            </tr>
+            <tr>
+                <td>Conductor</td>
+                <td>Material type, age, wire risk, historical maintenance.</td>
+            </tr>
+            <tr>
+                <td>Living</td>
+                <td>Population density and medically vulnerable customers.</td>
+            </tr>
+        </table>
+        All datasets are provided by SDG&E. They are collected by the company and kept privately under security. 
+    </div>
+
+    <div class="explanation">
+        <h2>Methodology</h2>
+        We coded a few different types of machine learning models in Python, with the help of data science packages such as  
+        Pandas, NumPy, and Scipy. <br><br>
         We have 4 models in total, which is 2 less of our proposed factors in ILLNESS because 
         some of the factors are similar enough to be combined into one model. Each model uses a different machine learning 
         algorithm that is best suited to their data type. For each model, a corresponding type of dataset is taken as input and
         learns the mathematical parameters according to the algorithm. The learned model predicts the wildfire risk 
         using a test dataset and outputs the accuracy, which is the result that we collect. 
     </div>
-    <img src="website_viz/flowchart2.png" alt="flowchart" width="70%" height="70%">
+    <figure>
+        <img src="website_viz/flowchart2.png" alt="flowchart" width="70%" height="70%">
+        <figcaption>
+            Fig.1 - Flowchart of our risk assessment model. Sub-models for weather patterns, vegetation risk, energy infrastructure, and life-critical services generate intermediate embeddings, which are combined into a final composite model for wildfire risk 
+            prediction.
+        </figcaption>
+    </figure>
+    
 
     <div class="explanation" id="results">
         <h2>Results</h2>
-        Our final, combined ILLNESS model has an accuracy of __%. <br>
-        The individual models' accuarcies are as following: 
-        [table?]
+        <h3>Model Comparison Table</h3>
+        <table class="bordered-table">
+            <tr>
+                <th>Model</th>
+                <th>Features</th>
+                <th>Output</th>
+            </tr>
+            <tr>
+                <td><strong>Weather Model</strong> - MLP</td>
+                <td>Temperature, dryness, windspeed</td>
+                <td>A weather risk score, reflecting how weather conditions contribute to potential wildfire ignition or spread.</td>
+            </tr>
+            <tr>
+                <td><strong>Nature Model</strong> - Linear Regression</td>
+                <td>Latitude, longitude, VRI, strike trees, elevation.</td>
+                <td>A weighted Nature Index (scaled 1-10).</td>
+            </tr>
+            <tr>
+                <td><strong>Energy/Service Model</strong> - Random Forest</td>
+                <td>Upstream HFTD, Days since work order (upstream/downstream), miles.</td>
+                <td>R²: 0.537, showing moderate predictive power.</td>
+            </tr>
+            <tr>
+                <td><strong>Life Model</strong> - Custom Weighted Function</td>
+                <td>Population density, number of customers served, presence of critical facilities.</td>
+                <td>A custom score out of 100 that takes into account critical customers such as essential service and customers on life support for each region of SDG&E’s territory.</td>
+            </tr>
+        </table>
     </div>
-    <img src="image.jpg" alt="accuracy-barchat" width="300" height="200">
+
+    <div class="explanation">
+        <h3>
+            Final Composite ILLNESS Model
+        </h3>
+        A mathematical model to assess wildfire risk and impact of power shutoffs, combining:
+    </div>
 
     <!-- Map -->
-    <div>
-        <h2>
+    <div class="explanation">
+        <h3>
             Predicted wildfire risk using our ILLNESS model
-        </h2>
+        </h3>
         Below is an interactive heatmap that shows our predicted wildfire risk. A redder area indicates a higher risk. 
         The areas are divided into districts of San Diego County, making it easier for users to find their location. 
-        When the mouse is hovered over an area, the tooltip shows the city name and ILLNESS score breakdown: energy, nature, 
+        When the mouse is hovered over an area, the tooltip shows the district name and ILLNESS score breakdown: energy, nature, 
         weather, and overall. The red-green color scale shows according to the overall score. 
     </div>
     <iframe src="website_viz/alpha_map.html" width="1100px" height="500px"></iframe>
@@ -109,9 +175,11 @@
         <h2>
             Predicted areas for PSPS using our ILLNESS model
         </h2>
-        Below is an interactive heatmap that shows PSPS risk, i.e. where a PSPS should occur or not. 
+        Below is an interactive heatmap that shows PSPS risk, i.e. where a PSPS should occur or not. The difference between this 
+        visualization and the previous one is that the population risk (life/living factor) is considered as well, so we can 
+        assess the impact a PSPS will bring to a community. 
         A redder area means a higher PSPS risk, therefore should not be shut off. As you can see, the red areas are mostly 
-        downtown, where the population is dense and that increases the life/living risk factor. If an area, like Ramona, is 
+        downtown, where the population is dense and that increases the life/living risk factor. If an area is 
         green, that means the risk of wildfire outweighs the risk on the community, and a power shutoff is needed. 
     </div>
     <iframe src="website_viz/result_viz.html" width="1100px" height="500px"></iframe>
@@ -119,26 +187,28 @@
     <div class="explanation" id="discussion">
         <h2>Discussion</h2>
         This project could be for internal use, implemented by SDG&E. It can also be for public, as the ILLNESS model 
-        provides a single numerical value that is easy to interpret. Similar to our geographical heatmap above, we could 
-        make a dashboard website that updates the score live and provide transparency to people who uses energy from SDG&E 
-        so they are aware of possible PSPS events, and perhaps even the reasons. 
+        provides a single numerical value that is easy to interpret. Our current geographical heatmaps are static, 
+        and we could improve by making them 
+        a dashboard that updates the score live. We want to provide transparency to people who uses energy from SDG&E 
+        so they are aware of possible PSPS events and the reasons. 
     </div>
 
     <div class="explanation" id="credits">
-        <h2>Credits</h2>
-        We would like to thank our mentors at SDG&E: 
+        <h2>Acknowledgement</h2>
+        We would like to express our sincere gratitude to my mentors at San Diego Gas & Electric (SDG&E) — 
         <a href="https://www.linkedin.com/in/pdashk">Phi Nguyen</a>, 
-        <a href="https://www.linkedin.com/in/kasramohammadi">Kasra Mohammadi</a> and 
-        <a href="https://www.linkedin.com/in/jakewigal">Jacob Wigal</a>!
+        <a href="https://www.linkedin.com/in/kasramohammadi">Kasra Mohammadi</a>,
+        <a href="https://www.linkedin.com/in/jakewigal">Jacob Wigal</a>,
+        Moon, Yumin Park, Kelly H., and others — for their invaluable guidance and support throughout this project. Their expertise provided critical insights into SDG&E's original scoring system, shaping our understanding of risk assessment.
     </div>
 
     <div class="explanation">
-        <h2>GitHub Page</h2>
+        <h2>View More</h2>
         Click <a href="https://github.com/gkao25/dsc180b-illness-score">here</a> 
         to visit our GitHub repository. <br>
-        Click <a href="https://github.com/gkao25/dsc180b-illness-score">here</a> 
+        Click <a href="https://drive.google.com/file/d/1JMmczGUbJE86SRCGu6aIZiQUqWhgqdYC/view">here</a> 
         to view our poster. <br>
-        Click <a href="https://github.com/gkao25/dsc180b-illness-score">here</a> 
+        Click <a href="https://drive.google.com/file/d/1BejJhpo1WLSDCgjvqvwmCympUFEyTW9e/view">here</a> 
         to view our report. 
     </div>
 

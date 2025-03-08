@@ -8,27 +8,32 @@ body {
     padding-bottom: 100px;
     background-color: #f0f3e6;
     line-height: 1.5;
+    margin-top: 50px;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
 h1 {
     text-align: center;
-    font-size: 32px;
+    font-size: 40px;
     margin-bottom: 10px;
+    margin-top: 30px;
 }
 
 h2 {
     color: #12274b;
+    font-size: 30px;
+    margin-bottom: 5px;
   }
   
 h3 {
     text-align: center;
-    font-size: 18px;
-    margin-top: 0;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 5px;
     color: #5F5555;
 }
 h4 {
@@ -45,20 +50,53 @@ h4 {
     text-align: center;
 }
 
+ul {
+    display: inline-block; /* Makes the list centered */
+    text-align: left; /* Aligns text inside the list properly */
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0;
+}
+
+figure {
+    text-align: center;
+    margin-top: 0;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    max-width: 70%;
+    margin: 0 auto; 
+}
+
+
 /* Center the table */
-table {
+.borderless-table {
     border-collapse: collapse;
     width: 50%; /* Adjust as needed */
     margin: 10px auto; /* Centers the table horizontally */
 }
 
 /* Style table cells */
-td, th {
+.borderless-table td, .borderless-table th {
     border: none;
     padding: 6px;
     text-align: left; /* Aligns text to the left */
 }
 
+.bordered-table {
+    border: 5px;
+    width: 80%;
+    margin: 10px auto;
+}
+
+.bordered-table td, .bordered-table th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 5px;
+}
 
 /* Back to Top Button */
 #backToTop {
