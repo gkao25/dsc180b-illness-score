@@ -18,7 +18,7 @@ https://gkao25.github.io/dsc180b-illness-score/
 - `ens_preprocessing.py` → Main script for downloading and preprocessing the data from SDGE/SDSC. 
 - `weather_training.py` → Main script for *weather variables* (wind speed, air humidity, etc.) ML model training. 
 - `midterm_energy.py` → Main script for *energy conductor* (type, structure, etc.) data processing, visualization, and ML model training.
-- `mid_term_vegetation.py` → Main script for *vegetation, geographical, and living* data processing, visualization, and ML model training.
+- `nature_index.py` → Main script for *vegetation, geographical, and living* data processing, visualization, and ML model training.
 - Jupyter Notebooks → For testing/development. Due to data security, no cummulative outputs are shown. 
 - `website_viz` → Images for GitHub page. 
 
@@ -26,7 +26,7 @@ https://gkao25.github.io/dsc180b-illness-score/
 
 ---
 
-## 🔧 Installation & Environment Setup for Vegetation file (mid_term_vegetation.py) and Energy file (midterm_energy.py)
+## 🔧 Installation & Environment Setup for Vegetation file (Desktop/UCSD/DSC_180B/living_life_code/.py) and Energy file (midterm_energy.py)
 
 To ensure a **consistent environment**, we recommend using **Conda** to manage dependencies.
 
