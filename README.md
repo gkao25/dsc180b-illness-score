@@ -26,7 +26,7 @@ https://gkao25.github.io/dsc180b-illness-score/
 
 ---
 
-## 🔧 Installation & Environment Setup for Vegetation file (Desktop/UCSD/DSC_180B/living_life_code/.py) and Energy file (midterm_energy.py)
+## 🔧 Installation & Environment Setup for Vegetation file (nature_index.py) and Energy file (midterm_energy.py)
 
 To ensure a **consistent environment**, we recommend using **Conda** to manage dependencies.
 
