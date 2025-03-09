@@ -165,27 +165,10 @@ scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-models = {
-    "Linear Regression": LinearRegression(),
-    "Random Forest": RandomForestRegressor(n_estimators=100, max_depth=25, random_state=42),
-    # "Support Vector Regressor": SVR(kernel='rbf', C=100, gamma=0.1, epsilon=0.1),
-    # "MLP Regressor": MLPRegressor(hidden_layer_sizes=(50, 50), learning_rate_init=0.01, max_iter=300, random_state=42)
-}
-
-results = []
-for name, model in models.items():
-    if name in ["Random Forest", "Linear Regression"]:
-        model.fit(X_train, y_train)
-        y_pred = model.predict(X_test)
-    else:
-        model.fit(X_train_scaled, y_train)
-        y_pred = model.predict(X_test_scaled)
-
-    mae = mean_absolute_error(y_test, y_pred)
-    mse = mean_squared_error(y_test, y_pred)
-    r2 = r2_score(y_test, y_pred)
-
-    results.append({"Model": name, "MAE": mae, "MSE": mse, "R² Score": r2})
-
-results_df = pd.DataFrame(results)
-print(results_df)
+rf_model = RandomForestRegressor(n_estimators=100, max_depth=20, random_state=5, min_samples_split=10)
+rf_model.fit(X_train_scaled, y_train)
+y_pred = rf_model.predict(X_test_scaled)
+mae = mean_absolute_error(y_test, y_pred)
+mse = mean_squared_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
+print(f'MAE: {mae}, MSE: {mse}, R2 score: {r2}')
