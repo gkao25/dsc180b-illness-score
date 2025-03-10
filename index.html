@@ -137,7 +137,6 @@
             </tr>
         </table>
         <p>The "Features" column shows the most critical features taht are used in our intermediate models. They help us understand what our model is looking at when considering wildfire and/or PSPS risk. </p>
-        <p>Due to the technical difficulty of collecting live social events and crowd movements, the Living factor is not included in the intermediate models. </p>
     </div>
 
     <div class="explanation">
@@ -152,7 +151,7 @@
         <h3>
             Final Composite ILLNESS Model
         </h3>
-        <p>We created a mathematical model to assess wildfire risk and impact of power shutoffs. It includes all the aforementioned factors: weather, nature, and infrastructure wildfire risk within an area, and the impact on customers if power is shut off. Each varaible is weighted according to its importance, and produce a final score that indicates the PSPS risk. This number ranges from 1 to 100 (the observed max is 74), which makes it easy to understand at a high level. Other mathematical constants are included to scale and adjust for interactions or overlaps between different wildfire risk factors.</p>
+        <p>We created a mathematical model to assess wildfire risk and impact of power shutoffs. It includes all the aforementioned factors: weather, nature, and infrastructure wildfire risk within an area, plus the impact on customers if power is shut off. Each varaible is weighted according to its importance, and produce a final score that indicates the PSPS risk. This number ranges from 1 to 100 (the observed max is 74), which makes it easy to understand at a high level. Other mathematical constants are included to scale and adjust for interactions or overlaps between different wildfire risk factors.</p>
         <i>Please check our report (linked at the bottom of the page) if you would like to see more details about the composite function. </i>
     </div>
 
@@ -160,7 +159,7 @@
         <h3>
             Predicted Areas for PSPS Using Our ILLNESS Model
         </h3>
-        Below is an interactive heatmap that shows PSPS risk, i.e. where a PSPS should occur or not. The difference between this visualization and the previous one is that the population risk (life factor) is considered as well, so we can assess the impact a PSPS will bring to a community. A redder area means a higher PSPS risk, therefore should not be shut off. As you can see, the red areas are mostly downtown, where the population is dense and that increases the life risk factor. If an area is green, that means the PSPS impact is low, or that risk of wildfire outweighs the risk on the community and a power shutoff is needed. 
+        Below is an interactive heatmap that shows PSPS risk, i.e. where a PSPS should occur or not. The difference between this visualization and the previous one is that the population risk (life/living factor) is considered as well, so we can assess the impact a PSPS will bring to a community. A redder area means a higher PSPS risk, therefore should not be shut off. As you can see, the red areas are mostly downtown, where the population is dense and that increases the life risk factor. If an area is green, that means the PSPS impact is low, or that risk of wildfire outweighs the risk on the community and a power shutoff is needed. 
     </div>
     <iframe src="website_viz/result_viz.html" width="1100px" height="500px"></iframe>
 
@@ -169,7 +168,7 @@
         <p>As we can see from the heatmaps, the east side of San Diego County has higher wildfire risk but lower PSPS risk. Geographically, the east side has more valleys that guide strong and dry Santa Ana wind into the area, which makes wildfires more likely. Those districts are also less populated so the impact of an PSPS is predicted to be low (as illustrated by the green color), and a PSPS can be safely issued without too much concerns from the neighbors. </p>
         <p>On the flip side, the west side of the county has a lower wildfire risk but higher PSPS risk. This is because most of the population live in or close to downtown San Diego, which is on the coast. Shutting off the energy of this area could lead to many problems, from general inconvenience to larger safety on the road or in public areas. There are special cases like Ramona, where the heatmap colors change from red to green. Even though these districts are populated and the life factor should be high, the risk of wildfire still outweighs the risk on the community, and a PSPS is strongly advised to mitigate damage on the houses and on people. </p>
         <h3>Future Improvements</h3>
-        <p>This project could be for internal use, implemented by SDG&E as a more data-informed decision maker for issuing a PSPS. We hope that with more resources, we could again reconsider the Living factor, which considers the present social events. PSPS can heavily impact a crowd and we do not want it to cause panic. However, due to the project team's limited power, we were unable to collect such data. </p>
+        <p>This project could be for internal use, implemented by SDG&E as a more data-informed decision maker for issuing a PSPS. The datasets can be expanded to include more and newer data, such as the meteorology data collected from SDG&E's weather stations every 10 minutes. We could also include data from different sources, such as public weather data, satelite images of vegetation, and public census for the life factor. </p>
         <p>Our project can also benefit the general public, as the ILLNESS model provides a single numerical value that is easy to interpret, even for those who may not understand the PSPS decision process entirely. Although our current geographical heatmaps are static, we could improve them by creating a live dashboard that updates the score periodically. It would again include the tooltip details with score breakdowns, as we want to provide transparency to people who consumes energy from SDG&E so they are aware of possible PSPS events and the reasons. </p>
     </div>
 
