@@ -23,7 +23,7 @@ https://gkao25.github.io/dsc180b-illness-score/
 - `nature_index.py` → Main script for *vegetation, geographical, and living* data processing, visualization, and ML model training.
 - `index.html` and `style.css` → Code for the GitHub page. 
 - "Development" folder → Jupyter Notebooks for testing/development. Due to data security, no outputs are shown. 
-- "Website_viz" folder → Visuzlizations used for the GitHub page. 
+- "Website_Viz" folder → Visuzlizations used for the GitHub page. 
 
 **Note:** The datasets are not publicly available, so they cannot be uploaded here. However, you can find their metadata below.
 
