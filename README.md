@@ -18,11 +18,11 @@ https://gkao25.github.io/dsc180b-illness-score/
 - `ens_preprocessing.py` → Main script for downloading and preprocessing the data from SDGE/SDSC. 
 - "Weather" folder
   - `Data_Transformation.py` → Weather data transformation for the MLP model.
-  - `MLP_model.py` (inside the Weather folder) → Main script for *weather variables* (wind speed, air humidity, etc.) ML model training. 
+  - `MLP_model.py` → Main script for *weather variables* (wind speed, air humidity, etc.) ML model training. 
 - `energy_service.py` → Main script for *energy conductor* (type, structure, etc.) data processing, visualization, and ML model training.
 - `nature_index.py` → Main script for *vegetation, geographical, and living* data processing, visualization, and ML model training.
+- "Development" folder → Jupyter Notebooks for testing/development and checkpoint codes. Due to data security, no outputs are shown. 
 - `index.html` and `style.css` → Code for the GitHub page. 
-- "Development" folder → Jupyter Notebooks for testing/development. Due to data security, no outputs are shown. 
 - "Website_Viz" folder → Visuzlizations used for the GitHub page. 
 
 **Note:** The datasets are not publicly available, so they cannot be uploaded here. However, you can find their metadata below.
