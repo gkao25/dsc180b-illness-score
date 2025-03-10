@@ -99,7 +99,7 @@
         <p>We have 4 models in total, which is 2 less of our proposed factors in ILLNESS because some of the factors are similar enough to be combined into one model. Each model uses a different machine learning algorithm that is best suited to their data type. For each model, a corresponding type of dataset is taken as input and learns the mathematical parameters according to the algorithm. The learned model predicts the wildfire risk using a test dataset and outputs a score, which we collect for the final composite ILLNESS model. </p>
     </div>
     <figure>
-        <img src="website_viz/flowchart2.png" alt="flowchart" width="70%" height="70%">
+        <img src="Website_Viz/flowchart2.png" alt="flowchart" width="70%" height="70%">
         <figcaption>
             Figure 1 - Flowchart of our risk assessment model. Sub-models for weather patterns, vegetation risk, energy infrastructure, and life-critical services generate intermediate embeddings, which are combined into a final composite model for wildfire risk prediction.
         </figcaption>
@@ -145,7 +145,7 @@
         </h3>
         Below is an interactive heatmap that shows our predicted wildfire risk. A redder area indicates a higher risk. The areas are divided into districts of San Diego County, making it easier for users to find their location. When the mouse is hovered over an area, the tooltip shows the district name and wildfire risk breakdown: energy, nature, weather, and overall. The red-green color scale shows according to the overall score. 
     </div>
-    <iframe src="website_viz/alpha_map.html" width="1100px" height="500px"></iframe>
+    <iframe src="Website_Viz/alpha_map.html" width="1100px" height="500px"></iframe>
 
     <div class="explanation">
         <h3>
@@ -162,7 +162,7 @@
         </h3>
         Below is an interactive heatmap that shows PSPS risk, i.e. where a PSPS should occur or not. The difference between this visualization and the previous one is that the population risk (life/living factor) is considered as well, so we can assess the impact a PSPS will bring to a community. A redder area means a higher PSPS risk, therefore should not be shut off. As you can see, the red areas are mostly downtown, where the population is dense and that increases the life risk factor. If an area is green, that means the PSPS impact is low, or that risk of wildfire outweighs the risk on the community and a power shutoff is needed. 
     </div>
-    <iframe src="website_viz/result_viz.html" width="1100px" height="500px"></iframe>
+    <iframe src="Website_Viz/result_viz.html" width="1100px" height="500px"></iframe>
 
     <div class="explanation" id="discussion">
         <h2>Discussion</h2>
