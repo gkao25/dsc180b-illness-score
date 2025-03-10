@@ -16,12 +16,14 @@ https://gkao25.github.io/dsc180b-illness-score/
 - `README.md` → Instructions on setup and usage.
 - `requirements.txt` → List of required Python dependencies.
 - `ens_preprocessing.py` → Main script for downloading and preprocessing the data from SDGE/SDSC. 
-- `weather_training.py` → Main script for *weather variables* (wind speed, air humidity, etc.) ML model training. 
+- "Weather" folder
+  - `Data_Transformation.py` → Weather data transformation for the MLP model.
+  - `MLP_model.py` (inside the Weather folder) → Main script for *weather variables* (wind speed, air humidity, etc.) ML model training. 
 - `energy_service.py` → Main script for *energy conductor* (type, structure, etc.) data processing, visualization, and ML model training.
 - `nature_index.py` → Main script for *vegetation, geographical, and living* data processing, visualization, and ML model training.
-- Jupyter Notebooks → For testing/development. Due to data security, no cummulative outputs are shown. 
 - `index.html` and `style.css` → Code for the GitHub page. 
-- `website_viz` → Visuzlizations used for the GitHub page. 
+- "Development" folder → Jupyter Notebooks for testing/development. Due to data security, no outputs are shown. 
+- "Website_viz" folder → Visuzlizations used for the GitHub page. 
 
 **Note:** The datasets are not publicly available, so they cannot be uploaded here. However, you can find their metadata below.
 
@@ -135,16 +137,16 @@ python <filename.py>
 #### **6️⃣ Conductor Span Data (`dev_wings_agg_span_2024_01_01.csv`)**
 - **Description:** Infrastructure type, history, and related upstream/downstream data for all conductor spans of SDG&E.
 - Not all columns are not listed because there are more than 100 columns. The variables used in this project are:
-  - 'hardened_state' → Metal hardened state of the conductor.
-  - 'miles' → Span Miles.
-  - 'upstream_struct_age' → Age of the span's upstream structure.
-  - 'upstream_struct_hftd' → HFTD tier of span's upstream structure.
-  - 'upstream_struct_material' → Material of the span's upstream structure.
-  - 'upstream_struct_type' → Type of stucture (Underground (ug), Overhead (oh), or Surface (surf)) of the span's upstream structure.
-  - 'upstream_struct_workorderdate' → Latest install workorder date of the span's upstream structure.
-  - 'downstream_struct_age' → Age of the span's downstream structure.
-  - 'downstream_struct_hftd' → HFTD tier of span's downstream structure.
-  - 'downstream_struct_material' → Material of the span's downstream structure.
-  - 'downstream_struct_type' → Type of stucture (Underground (ug), Overhead (oh), or Surface (surf)) of the span's downstream structure.
-  - 'downstream_struct_workorderdate' → Latest install workorder date of the span's downstream structure.
-  - 'wire_risk' → SME determined wire risk based on conductor infomation.
+  - `hardened_state` → Metal hardened state of the conductor.
+  - `miles` → Span Miles.
+  - `upstream_struct_age` → Age of the span's upstream structure.
+  - `upstream_struct_hftd` → HFTD tier of span's upstream structure.
+  - `upstream_struct_material` → Material of the span's upstream structure.
+  - `upstream_struct_type` → Type of stucture (Underground (ug), Overhead (oh), or Surface (surf)) of the span's upstream structure.
+  - `upstream_struct_workorderdate` → Latest install workorder date of the span's upstream structure.
+  - `downstream_struct_age` → Age of the span's downstream structure.
+  - `downstream_struct_hftd` → HFTD tier of span's downstream structure.
+  - `downstream_struct_material` → Material of the span's downstream structure.
+  - `downstream_struct_type` → Type of stucture (Underground (ug), Overhead (oh), or Surface (surf)) of the span's downstream structure.
+  - `downstream_struct_workorderdate` → Latest install workorder date of the span's downstream structure.
+  - `wire_risk` → SME determined wire risk based on conductor infomation.
