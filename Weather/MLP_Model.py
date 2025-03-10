@@ -60,7 +60,6 @@ def combine(folder_path):
         for file in csv_files:
             temp_df = pd.read_csv(file)  # Adjust 'sep' if needed
 
-            # Process lat_lon into latitude and longitude
             temp_df[['latitude', 'longitude']] = (
                 temp_df['lat_lon']
                 .str.strip('()')  # Remove parentheses
@@ -83,7 +82,6 @@ other_features_cols = [
     'accumulated_precipitation_amount', 'surface_downwelling_shortwave_flux'
 ]
 
-# Columns for latitude and longitude
 geo_features_cols = ['latitude', 'longitude']
 
 from sklearn.model_selection import train_test_split

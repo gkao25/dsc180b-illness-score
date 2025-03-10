@@ -38,7 +38,6 @@ def convert_nc_to_csv(file_path):
     Args:
         file_path (str): Path to the .nc file.
     """
-    # Extract date from file_path (expects an 8-digit date, e.g., 20200815)
     match = re.search(r'(\d{8})', file_path)
     if not match:
         raise ValueError("No valid date found in the file_path.")
@@ -47,7 +46,7 @@ def convert_nc_to_csv(file_path):
     
     # Create the main output folder and a subfolder (e.g., "2020-08")
     main_folder = "Cleaned_ENS"
-    sub_folder = formatted_date[:7]  # "YYYY-MM"
+    sub_folder = formatted_date[:7]
     output_folder = os.path.join(main_folder, sub_folder)
     
     if not os.path.exists(main_folder):
@@ -94,15 +93,10 @@ def convert_nc_to_csv(file_path):
     print(f"Filtered CSV written to: {output_file}")
 
 if __name__ == "__main__":
-    # Define the base folder containing all the subfolders
     base_folder = "ens_gfs_001"
     
     # This pattern will match dfm*.nc files inside each subfolder of ens_gfs_001
     pattern = os.path.join(base_folder, "*", "dfm*.nc")
-    
-    # If you have deeper nested folders, you can use "**" and recursive=True:
-    # pattern = os.path.join(base_folder, "**", "dfm*.nc")
-    # nc_files = glob.glob(pattern, recursive=True)
     
     nc_files = glob.glob(pattern)
     
